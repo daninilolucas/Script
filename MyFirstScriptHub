@@ -1,0 +1,9 @@
+local Orion = require(game:HttpGet("https://raw.githubusercontent.com/OrionLibrary/Orion/main/source.lua"))
+
+local MyUI = Orion:CreateOrion("Minha GUI")
+local MainSection = MyUI:CreateSection("Principal")
+
+MainSection:TextLabel("Bem-vindo!")
+MainSection:TextButton("Clique Aqui", "Info", function() print("Clicou!") end)
+MainSection:Toggle("Ativar opção", function(t) print("Toggle:", t) end)
+MainSection:Slider("Volume", 0, 100, function(v) print("Valor:", v) end)
